@@ -45,7 +45,8 @@ export default class Timeline extends Component {
   }
 
   componentWillUnmount() {
-    this.$el.destroy()
+    if(this.$el != null && this.$el != undefined)
+      this.$el.destroy()
   }
 
   componentDidMount() {
